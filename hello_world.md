@@ -1,6 +1,6 @@
 # Introduction
 
-During this bootcamp, you will be creating webpages with HTML, CSS and JS. We want everyone to leave this bootcamp with a webpage they have created.
+During this cours, you will be creating webpages with HTML, CSS and JS. We want everyone to leave this course with a webpage they have created.
 
 If you have never written a line of code in your life, don't worry. This booklet
 contains the code for several fun projects. You just need to copy the code
