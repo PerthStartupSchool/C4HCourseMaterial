@@ -96,5 +96,5 @@ The link tag tells the page where to find the stylesheet to use. You can include
 ## See what you can do!
 
   - Change the background colour of the page
-  - Try changing the colour of the link (Hint: You may need to use Google to figure out how to do this) 
+  - Try changing the colour of the links (Hint: You may need to use Google to figure out how to do this) 
   - Add an about.css file and link to it from about.html. Use this CSS to change the p tags to red on the about page only.
