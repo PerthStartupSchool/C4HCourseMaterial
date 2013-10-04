@@ -59,7 +59,10 @@ The file describes our second webpage.
   <!-- This block contains the primary content of the page. -->
   <body>
     <h1>About Me</h1>
-	<p>My name is [your name] and this is my about page!</p>
+	<p>
+		My name is [your name] and this is my about page! <br />
+		Back to <a href="index.html">Home</a> page.
+	</p>
   </body>
 </html>
 ```
@@ -79,14 +82,14 @@ h1{
 }
 
 p{
-	color: red;
+	color: yellow;
 }
 
 ```
 
 ## Styling your webpage
 
-When you view your webpage, you will notice that the background colour is grey, the large text is black, and the text in the p tags are red. This is because you have told the page to style these elements like this in your styles.css file.
+When you view your webpage, you will notice that the background colour is grey, the large text is black, and the text in the p tags are yellow. This is because you have told the page to style these elements like this in your styles.css file.
 
 The link tag tells the page where to find the stylesheet to use. You can include multiple link tags on a webpage. For example, you may want to add specific styling for the about page.
 
@@ -94,4 +97,4 @@ The link tag tells the page where to find the stylesheet to use. You can include
 
   - Change the background colour of the page
   - Try changing the colour of the link (Hint: You may need to use Google to figure out how to do this) 
-  - Add an about.css file and link to it from about.html. Use this CSS to change the p tags to yellow on the about page only.
+  - Add an about.css file and link to it from about.html. Use this CSS to change the p tags to red on the about page only.
