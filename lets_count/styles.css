@@ -1,0 +1,13 @@
+#count_sentence{
+	color: Navy;
+	font-size: 14pt;
+}
+
+button{
+	background-color: AliceBlue;
+	font-size: 24pt;
+}
+
+button:hover{
+	background-color: LightSkyBlue;
+}
