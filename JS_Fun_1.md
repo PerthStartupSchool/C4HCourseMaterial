@@ -120,7 +120,7 @@ console.log(evenMoreFun)
 console.log(learningSomething() + notHavingAnyOfIt(makeLearningMoreFun()))
 
 ```
-you can type these into the console in your browser to play with them if you want, or use the console.log command as you can see
+you can type these into the console in your browser to play with them if you want, or use the console.log command as you can see we've used here 
 
 Things we know so far:
 defining a function looks like:
