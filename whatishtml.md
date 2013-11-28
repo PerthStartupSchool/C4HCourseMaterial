@@ -34,7 +34,7 @@ If an HTML document doesn't have those bare-minimum tags, then browsers can refu
 
 CSS stands for Cascading Style Sheet
 
-The 'cascading bit' refers to the fact that style sheets can refer to other style sheets. In practice no-one does this because it's stupid (and much easier to link to multiple style sheets from the original HTML document)
+The 'cascading bit' refers to the fact that styles can be inherited from other style sheets, which is cool and useful.
 
 CSS contains the appearance information for HTML documents represented as a bunch of rules. We'll get to this in a second
 
