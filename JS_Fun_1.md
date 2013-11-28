@@ -22,7 +22,7 @@ save that as 'index.html'
 now let's create our javascript file, called 'fun.js' in the same folder
 ```javascript
 
-newdiv = document.createElement("div");
+var newdiv = document.createElement("div");
 newdiv.innerHTML = "this is the new div";
 parent = document.getElementbyId("container")
 parent.appendChild(newdiv)
@@ -42,7 +42,7 @@ and that needs to be linked to from the HTML document, so change the bottom two 
 	<script src="fun.js"></script>
 </body>
 ```
-Why do we put the script at the bottom? Interesting question, I'm glad you asked. In a nutshell; because if we tell the browser about the scripts after all the rest of the content, then we don't run into problems where the script refers to things in the document that the browser hasn't loaded yet and so doesn't know about. As you get more advanced you'll find out that there are other places to specify scripts too, but for now just put them at the bottom.
+Why do we put the script at the bottom? Interesting question, I'm glad you asked. In a nutshell: because if we tell the browser about the scripts after all the rest of the content, then we don't run into problems where the script refers to things in the document that the browser hasn't loaded yet and so doesn't know about. As you get more advanced you'll find out that there are other places to specify scripts too, but for now just put them at the bottom.
 
 OK, so load the document and deal with any typos, and see your magic new content appear!
 
@@ -60,13 +60,13 @@ and change the script file to look like:
 
 ```javascript
 
-butt = document.getElementbyId("clickIt")
+var butt = document.getElementbyId("clickIt")
 butt.addEventHandler("click",clickButton)
 
 function clickButton() {
-	newdiv = document.createElement("div");
+	var newdiv = document.createElement("div");
 	newdiv.innerHTML = "this is the new div";
-	parent = document.getElementbyId("container")
+	var parent = document.getElementbyId("container")
 	parent.appendChild(newdiv)
 }
 
@@ -79,6 +79,7 @@ line-by-line explanation:
 
 ###Tech Interlude: Functions
 Functions are fun, it says it right there in the name.
+
 A function is a piece of code that can be 'called' by another piece of code, including itself. A function looks like this:
 ```javascript
 function name (parameters){
@@ -88,23 +89,110 @@ function name (parameters){
 ```
 explanation:
 * the name can be anything, except weird characters, but please for the sake of all things shiny, keep function names simple and memorable. The usual naming method is 'verbNoun' like 'doSomething', 'engageWarpDrive','haveANiceDay'
-* parameters are things that are passed to the function so it can be used flexibly. This doesn't make much sense now, but will as we go through it
+* parameters are things that are passed to the function so it can be used flexibly. This doesn't make much sense now, but will as we go through it. If the function has no parameters then the brackets () still need to be there
 * value is returned from the function so the code that called it can do something with the result if it needs to.
 
 a few example functions:
 
 ```javascript
-learning = "fun";
+var learning = "learning ";
 
+function learningSomething(){
+	return "learning is "
+}
 function makeLearningMoreFun(l){
 	mf = l + " fun"; 
 	return mf;
 }
+function notHavingAnyOfIt(s){
+	return "not " + s
+}
 
-moreFun = makeLearningMoreFun(learning);
+var moreFun = makeLearningMoreFun(learning);
+console.log(moreFun)
+var learningFun = makeLearningMoreFun(learningSomething())
+console.log(learningFun)
 
-evenMoreFun = makeLearningMoreFun(moreFun);
+var evenMoreFun = makeLearningMoreFun(moreFun);
+console.log(evenMoreFun)
+
+//now for complexity!
+console.log(learningSomething() + notHavingAnyOfIt(makeLearningMoreFun()))
 
 ```
-you can type these into the console in your browser to play with them if you want
+you can type these into the console in your browser to play with them if you want, or use the console.log command as you can see
 
+Things we know so far:
+defining a function looks like:
+```javascript
+function whatever(){
+	var result = "whatever"
+	return result
+}
+```
+Calling a function from other code looks like:
+``` javascript
+var thing = whatever()
+```
+note the brackets! without them you assign the function itself to the variable thing, which gets really confusing really quickly (and we've all done it and spent way too long working out why thing isn't "whatever")
+
+On to the two other key things in javascript: conditions and loops
+
+####Conditions
+
+Conditions are easy: 
+```javascript
+if (something == somethingElse) {
+	doThatThingThatYouDo()
+} else {
+	dontDoTheThing()
+}
+```
+the test condition has to be in brackets (), and the code sections for each condition has to be in {} brackets too
+the condition tests are a little weird:
+  * == - equal
+  * != - not equal
+  * >  - greater than
+  * <  - less than
+  * >= - equal or greater
+  * <= - equal or less than
+  * !  - not
+
+There's also this one:
+ * === - really, really equal to, not just pretending to be equal to
+
+I only add this because it can be confusing looking at other people's code and seeing it sitting there like a typo.
+
+Each condition must evaluate to 'true' or 'false' (so 1 == 1 is 'true', 1 > 2 is 'false').
+If the condition is true then the code immediately after the if statement is executed.
+If the condition is false then the code immediately after the else statement is executed (if present)
+
+The ! (not) condition can be combined with other conditions if you want to execute something only if the test is false
+```javascript
+if  !(error === "undefined"){
+	//oops bad thing happened!
+}
+```
+
+####Loops 
+
+Loops are pretty easy, but can be confusing at first
+```javascript
+for(var i = 0; i < 10; i++){
+	doSomethingTenTimes()
+}
+```
+the for statement is made up of three parts, separated by semicolons:
+	1: done once before the loop starts
+	2: a test that is checked on each loop iteration, the loop will continue if the check is 'true' and stop if 'false'
+	3: done once between each iteration
+
+The standard format (as above) is almost always what you want to do:
+```javascript
+var timesToDoIt = 100
+for (var i = 0; i < timesToDoIt; i++){
+	console.log("doing it " + i + " times")
+	doIt()
+}
+```
+if you just remember to write loops like this, you'll be fine for a few years of coding. 
