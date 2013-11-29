@@ -313,6 +313,6 @@ So this statement reads "check if the value of count is zero, then add one to it
 If you want something to try your hand at with javascript and the DOM:
 
 1. Make a page that accepts user input (in an `<input type="text">` field) and adds it to a <ul> list on the same page by clicking on a button
-1. Change that exercise to add the word to a second list if it contains the word 'foo'
-1. Change that exercise to let the user specify the 'foo' word in another text input box
-1. Add a 'total words' count at the bottom of each list to show how many entries are in each list, updated with each new entry
+2. Change that exercise to add the word to a second list if it contains the word 'foo'
+3. Change that exercise to let the user specify the 'foo' word in another text input box
+4. Add a 'total words' count at the bottom of each list to show how many entries are in each list, updated with each new entry

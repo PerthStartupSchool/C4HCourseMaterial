@@ -6,6 +6,6 @@ Project packs for PSS Beginner's HTML
  * [lesson 3: Chrome Inspector](chrome.md)
  * [lesson 4: CSS is fun](css.md)
  * [lesson 5: Let's Count](/lets_count/lets_count.md)
- * [lesson 6: Bootstrap]()
+ * [lesson 6: Bootstrap](/bootstrap.md)
  * [lesson 7: Javascript and the DOM](/JS_Fun_1.md)
- * [lesson 8: Jquery to make things easier]()
+ * [lesson 8: Jquery to make things easier](/jquery.md)
