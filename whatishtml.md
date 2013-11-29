@@ -88,13 +88,17 @@ javascript programming is a huge, fascinating subject, way larger than we'll be 
 # Content, Appearance and Behaviour
 -----------------------------------
 
-HTML contains the CONTENT for your page. The text, the structure, the links to everything else.
+*HTML* contains the *CONTENT* for your page. The text, the structure, the links to everything else.
 
-CSS contains the APPEARANCE for your page. What fonts, what colours, what sizes, where on the page.
+*CSS* contains the *APPEARANCE* for your page. What fonts, what colours, what sizes, where on the page.
 
-Javascript contains the BEHAVIOUR for your page. What happens when a button is clicked, what data is fetched from the server, and so on
+*Javascript* contains the *BEHAVIOUR* for your page. What happens when a button is clicked, what data is fetched from the server, and so on.
 
-There are some grey areas (e.g. both CSS and Javascript can do animation) but you should keep this in mind always. Don't pollute your HTML documents with stuff governing its appearance, and don't create content with javascript (hide it and reveal it instead).
+There are some grey areas (e.g. both CSS and Javascript can do animation) but you should keep this simple set of rules in mind when building web apps.
+
+Why? 
+Because it gets hard to understand and maintain. If you know that the structure of the document is held in the HTML (and not created in some obscure function that's loaded by your script), and all the rules for the site's appearance are in the CSS file(s) then it's easy to find bugs and change things. If your code is all over the place then you never know where anything is and it becomes difficult to make changes. 
+This becomes especially true when you re-use files for multiple pages; if the CSS file is used for all pages it's easy to change the rules and know the effects. If each page also implements some of its own rules then you don't know what the effects of any change are going to be without checking every single page.
 
 # Other stuff you probably need to know at this point
 -----------------------------------------------------

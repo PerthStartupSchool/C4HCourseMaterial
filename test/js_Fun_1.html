@@ -1,0 +1,42 @@
+<head>
+	<title>Let's have some fun with javascript</title>
+</head>
+<body>
+	<div id="container">
+		<h1>we love messing with code</h1>
+		<button id="clickIt">Click me!</button>
+	</div>
+	<script>
+var butt = document.getElementById("clickIt")
+butt.addEventListener("click",clickButton)
+
+var count = 0
+function clickButton() {
+	var parent = document.getElementById("container");
+	if (count++ ==0){
+		createNewDiv(1);
+		return;
+	}
+	var div = document.getElementById("newDiv");
+	if (count%2 ==0){
+		hideDiv(div);
+	} else {
+		showDiv(div);
+	}
+}
+function createNewDiv(clickCount){
+	var newdiv = document.createElement("div");
+	newdiv.id = "newDiv"
+	newdiv.textContent = "this is click number " + clickCount;
+	var parent = document.getElementById("container");
+	parent.appendChild(newdiv);
+}
+function showDiv(div){
+	div.setAttribute("style", "display:block;");
+	div.textContent = "this is click number " + count;
+}
+function hideDiv(div){
+	div.setAttribute("style", "display:none;");
+}
+	</script>
+</body>
